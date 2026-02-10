@@ -19,5 +19,9 @@ public class PatternPlay {
     boolean gameOver = false;
     int turns = 0;
 
+    PatternPlay() {
+}
+
+
 }
  
