@@ -4,12 +4,14 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class PatternPlay {
-    PatternPlay() {
-        JFrame frame = new JFrame("Pattern Play");
-        frame.setSize(600, 650);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+     int boardWidth = 600;
+        int boardHeight = 650;
+  
+         JFrame frame = new JFrame("Pattern Play");
+        JLabel textLabel = new JLabel();
+        JPanel textPanel = new JPanel();
+        JPanel boardPanel = new JPanel();
+    
 
     JButton[][] board = new JButton[3][3];
     String playerX = "X";
@@ -20,8 +22,12 @@ public class PatternPlay {
     int turns = 0;
 
     PatternPlay() {
+    frame.setVisible(true);
+    frame.setSize(boardWidth, boardHeight);
+    frame.setLocationRelativeTo(null);
+    frame.setResizable(false);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setLayout(new BorderLayout());
 }
 
-
 }
- 
