@@ -36,6 +36,11 @@ public class PatternPlay {
     textLabel.setText("Pattern Play");
     textLabel.setOpaque(true);
 
+    textPanel.setLayout(new BorderLayout());
+    textPanel.add(textLabel);
+    frame.add(textPanel, BorderLayout.NORTH);
+
+
 }
 
 }
