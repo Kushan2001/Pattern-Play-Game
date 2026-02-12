@@ -138,9 +138,17 @@ void checkWinner() {
         }
     }
 
+    void setWinner(JButton tile) {
+        tile.setForeground(Color.green);
+        tile.setBackground(Color.gray);
+        textLabel.setText("Congratulations ! " +currentPlayer + " is the winner");
+    }
+
+    
+
+
 }
 
 
 
 
-}
