@@ -77,5 +77,9 @@ public class PatternPlay {
 
 
 }
+void checkWinner() {
+}
+
+
 
 }
