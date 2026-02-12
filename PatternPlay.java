@@ -40,6 +40,11 @@ public class PatternPlay {
     textPanel.add(textLabel);
     frame.add(textPanel, BorderLayout.NORTH);
 
+    boardPanel.setLayout(new GridLayout(3, 3));
+    boardPanel.setBackground(Color.darkGray);
+    frame.add(boardPanel);
+
+
 
 }
 
