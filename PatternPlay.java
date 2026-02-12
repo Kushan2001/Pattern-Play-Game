@@ -105,7 +105,41 @@ void checkWinner() {
                 return;
             }
         }
+
+        //diagonally
+        if (board[0][0].getText() == board[1][1].getText() &&
+            board[1][1].getText() == board[2][2].getText() &&
+            board[0][0].getText() != "") {
+            for (int i = 0; i < 3; i++) {
+                setWinner(board[i][i]);
+            }
+            gameOver = true;
+            return;
+        }
+
+        //anti-diagonally
+        if (board[0][2].getText() == board[1][1].getText() &&
+            board[1][1].getText() == board[2][0].getText() &&
+            board[0][2].getText() != "") {
+            setWinner(board[0][2]);
+            setWinner(board[1][1]);
+            setWinner(board[2][0]);
+            gameOver = true;
+            return;
+        }
+
+        if (turns == 9) {
+            for (int r = 0; r < 3; r++) {
+                for (int c = 0; c < 3; c++) {
+                    setTie(board[r][c]);
+                }
+            }
+            gameOver = true;
+        }
+    }
+
 }
+
 
 
 
