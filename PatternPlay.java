@@ -54,6 +54,23 @@ public class PatternPlay {
             tile.setForeground(Color.white);
             tile.setFont(new Font("Arial", Font.BOLD, 120));
             tile.setFocusable(false);
+
+        tile.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (gameOver) return;
+                JButton tile = (JButton) e.getSource();
+                if (tile.getText() == "") {
+                    tile.setText(currentPlayer);
+                    turns++;
+                    checkWinner();
+                            if (!gameOver) {
+                                currentPlayer = currentPlayer == playerX ? playerO : playerX;
+                                textLabel.setText(currentPlayer + "'s Round.");
+                            }
+                }
+            }
+});
+
         }
     }
 
