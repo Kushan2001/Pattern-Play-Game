@@ -78,6 +78,33 @@ public class PatternPlay {
 
 }
 void checkWinner() {
+    //horizontal Row
+        for (int r = 0; r < 3; r++) {
+            if (board[r][0].getText() == "") continue;
+
+            if (board[r][0].getText() == board[r][1].getText() &&
+                board[r][1].getText() == board[r][2].getText()) {
+                for (int i = 0; i < 3; i++) {
+                    setWinner(board[r][i]);
+                }
+                gameOver = true;
+                return;
+            }
+        }
+
+        //vertical Row
+        for (int c = 0; c < 3; c++) {
+            if (board[0][c].getText() == "") continue;
+            
+            if (board[0][c].getText() == board[1][c].getText() &&
+                board[1][c].getText() == board[2][c].getText()) {
+                for (int i = 0; i < 3; i++) {
+                    setWinner(board[i][c]);
+                }
+                gameOver = true;
+                return;
+            }
+        }
 }
 
 
