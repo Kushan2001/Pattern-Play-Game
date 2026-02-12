@@ -143,7 +143,11 @@ void checkWinner() {
         tile.setBackground(Color.gray);
         textLabel.setText("Congratulations ! " +currentPlayer + " is the winner");
     }
-
+    void setTie(JButton tile) {
+        tile.setForeground(Color.red);
+        tile.setBackground(Color.gray);
+        textLabel.setText("You Are Tie! Try Again");
+    }
 
 
 }
