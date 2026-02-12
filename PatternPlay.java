@@ -144,7 +144,6 @@ void checkWinner() {
         textLabel.setText("Congratulations ! " +currentPlayer + " is the winner");
     }
 
-    
 
 
 }
