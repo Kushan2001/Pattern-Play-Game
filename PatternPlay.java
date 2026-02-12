@@ -28,6 +28,14 @@ public class PatternPlay {
     frame.setResizable(false);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setLayout(new BorderLayout());
+
+    textLabel.setBackground(Color.gray);
+    textLabel.setForeground(Color.white);
+    textLabel.setFont(new Font("Arial", Font.BOLD, 30));
+    textLabel.setHorizontalAlignment(JLabel.CENTER);
+    textLabel.setText("Pattern Play");
+    textLabel.setOpaque(true);
+
 }
 
 }
